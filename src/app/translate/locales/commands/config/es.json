@@ -1,0 +1,10 @@
+{
+    "lang": {
+        "langs": "Por el momento contamos con los siguientes idiomas: ${options}.",
+        "success": "Se ha actualizado tu idioma correctamente."
+    },
+    "prefix": {
+        "success": "Se ha establecido el siguiente prefijo para el servidor: `${prefix}`.",
+        "error": "El prefijo no puede tener más de dos caracteres."
+    }
+}

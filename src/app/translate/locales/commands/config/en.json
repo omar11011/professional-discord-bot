@@ -1,0 +1,10 @@
+{
+    "lang": {
+        "langs": "At the moment we have the following languages: ${options}.",
+        "success": "Your language has been successfully updated."
+    },
+    "prefix": {
+        "success": "The following prefix has been set for the server: `${prefix}`.",
+        "error": "The prefix cannot be more than two characters."
+    }
+}

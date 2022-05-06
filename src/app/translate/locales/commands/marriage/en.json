@@ -1,0 +1,15 @@
+{
+    "marry": {
+        "not-mention": "You need to mention a user.",
+        "exists": "You were already married to ${couple}.",
+        "success": "Congratulations! You have married ${couple}.",
+        "question": "<@${id}>, the user ${user} has asked for your hand in marriage, accept him by replying `yes`.",
+        "missing-ring": "You don't have any engagement rings in your inventory."
+    },
+    "divorce": {
+        "not-mention": "You need to mention a user.",
+        "not-marry": "You have not married ${user}.",
+        "question": "<@${me}>, Are you sure you want to divorce ${user}? To accept answer `yes`.",
+        "success": "You have divorced ${user}."
+    }
+}

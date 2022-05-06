@@ -1,0 +1,6 @@
+{
+    "angry": {
+        "only": "${user} se ha enfadado >:c",
+        "mention": "${user} se ha enfadado con ${mention} >:c"
+    }
+}

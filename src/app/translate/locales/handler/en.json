@@ -1,0 +1,8 @@
+{
+    "botPermissions": "To use this command I need the following permissions: ${permissions}",
+    "cooldown": "You still have to wait ${time} to execute this command.",
+    "enabled": "Oops! This command is temporarily disabled.",
+    "ownerOnly": "Oops! This command can only be used by developers.",
+    "requiredArgs": "This command needs more arguments, check the help for this command with `help`.",
+    "userPermissions": "To use this command you need the following permissions: ${permissions}."
+}

@@ -1,0 +1,6 @@
+{
+    "start": {
+        "success": "You have successfully registered.",
+        "error": "You have already registered before."
+    }
+}

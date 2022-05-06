@@ -1,0 +1,6 @@
+{
+    "start": {
+        "success": "Te has registrado correctamente.",
+        "error": "Ya te habías registrado anteriormente."
+    }
+}
