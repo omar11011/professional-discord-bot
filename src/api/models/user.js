@@ -18,7 +18,7 @@ module.exports = (sequelize, DataTypes) => {
         user.hasMany(models.inventory, { as: "inventory", foreignKey: "userId" })
         user.hasMany(models.marriage, { as: "sent", foreignKey: "person1" })
         user.hasMany(models.marriage, { as: "received", foreignKey: "person2" })
-        user.hasMany(models.pet, { as: "pet", foreignKey: "userId" })
+        // user.hasMany(models.pet, { as: "pet", foreignKey: "userId" })
     }
 
     return user

@@ -1,16 +1,14 @@
 module.exports = (sequelize, DataTypes) => {
 
     const pet = sequelize.define("pet", {
-        breed: { type: DataTypes.STRING, allowNull: false },
-        alias: { type: DataTypes.STRING, allowNull: true },
-        purity: { type: DataTypes.INTEGER, defaultValue: 0 },
-        level: { type: DataTypes.INTEGER, defaultValue: 1 },
-        xp: { type: DataTypes.INTEGER, defaultValue: 0 },
-        hungry: { type: DataTypes.INTEGER, defaultValue: 100 },
-        fun: { type: DataTypes.INTEGER, defaultValue: 100 },
-        cleaning: { type: DataTypes.INTEGER, defaultValue: 100 },
-        current: { type: DataTypes.BOOLEAN, defaultValue: false },
-        date: { type: DataTypes.DATE, allowNull: false },
+        uuid: { type: DataTypes.INTEGER, allowNull: false },
+        name: { type: DataTypes.STRING, allowNull: false },
+        hp: { type: DataTypes.INTEGER, defaultValue: 30 },
+        attack: { type: DataTypes.INTEGER, defaultValue: 30 },
+        defense: { type: DataTypes.INTEGER, defaultValue: 30 },
+        speed: { type: DataTypes.INTEGER, defaultValue: 30 },
+        spattack: { type: DataTypes.INTEGER, defaultValue: 30 },
+        spdefense: { type: DataTypes.INTEGER, defaultValue: 30 },
     },  {
         sequelize,
         modelName: "pet",
@@ -18,7 +16,7 @@ module.exports = (sequelize, DataTypes) => {
     })
 
     pet.associate = models => {
-        pet.belongsTo(models.user, { as: "user" })
+        // pet.belongsTo(models.type, { as: "type" })
     }
 
     return pet
