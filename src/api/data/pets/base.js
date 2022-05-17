@@ -1,8 +1,14 @@
+const { normal } = require('../types')
+
 class Pet {
     constructor(props) {
         this.uuid = props.uuid || null
         this.name = props.name || undefined
-        this.type = props.type || null
+        this.type = props.type || [ normal ]
+        this.gender = {
+            male: props.gender ? (props.gender.male || 50) : 50,
+            female: props.gender ? (props.gender.female || 50) : 50,
+        }
         this.stats = {
             hp: props.stats ? (props.stats.hp || 30) : 30,
             attack: props.stats ? (props.stats.attack || 30) : 30,

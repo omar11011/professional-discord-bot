@@ -1,4 +1,4 @@
 module.exports = [
-    require('./001_urbinyan'),
-    require('./002_jerbox'),
+    require('./2781_urbinyan'),
+    require('./1566_jerbox'),
 ]

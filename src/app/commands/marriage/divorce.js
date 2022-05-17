@@ -1,5 +1,5 @@
 const Command = require('../../util/class/Command')
-const i18n = require('../../translate')('commands/marriage')
+const i18n = require('../../../translate')('commands/marriage')
 const { marriage } = require('../../database')
 
 module.exports = new Command({

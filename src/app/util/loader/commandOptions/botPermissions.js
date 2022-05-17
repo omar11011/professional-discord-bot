@@ -1,5 +1,5 @@
 const { Permissions } = require('discord.js')
-const i18n = require('../../../translate')('handler')
+const i18n = require('../../../../translate')('handler')
 
 async function botPermissions(message, command, props) {
 

@@ -9,7 +9,6 @@ module.exports = async (req, res) => {
     }
    
     if (data.money) user.money = parseInt(data.money)
-    if (data.gems) user.gems = parseInt(data.gems)
     if (data.reputation) user.reputation = parseInt(data.reputation)
 
     await models.user.create(user)

@@ -1,5 +1,5 @@
 const megadb = require('megadb')
-const i18n = require('../../../translate')('handler')
+const i18n = require('../../../../translate')('handler')
 
 async function cooldown(message, command, props) {
 

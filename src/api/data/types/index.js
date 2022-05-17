@@ -1,20 +1,13 @@
-module.exports = {
-    acero: { uuid: 1, name: "acero" },
-    agua: { uuid: 2, name: "agua" },
-    bicho: { uuid: 3, name: "bicho" },
-    dragon: { uuid: 4, name: "dragon" },
-    electrico: { uuid: 5, name: "electrico" },
-    fantasma: { uuid: 6, name: "fantasma" },
-    fuego: { uuid: 7, name: "fuego" },
-    hada: { uuid: 8, name: "hada" },
-    hielo: { uuid: 9, name: "hielo" },
-    lucha: { uuid: 10, name: "lucha" },
-    normal: { uuid: 11, name: "normal" },
-    planta: { uuid: 12, name: "planta" },
-    psiquico: { uuid: 13, name: "psiquico" },
-    roca: { uuid: 14, name: "roca" },
-    siniestro: { uuid: 15, name: "siniestro" },
-    tierra: { uuid: 16, name: "tierra" },
-    veneno: { uuid: 17, name: "veneno" },
-    volador: { uuid: 18, name: "volador" },
+const data = require('./data')
+const attributes = Object.keys(data)
+
+const i18n = require('../../../translate')('dict/types')
+const idioms = i18n.locales
+
+for (let i = 0; i < attributes.length; i++) {
+    data[attributes[i]].idioms = {}
+
+    for (let j = 0; j < idioms.length; j++) data[attributes[i]].idioms[idioms[j]] = i18n.res(attributes[i], idioms[j])
 }
+
+module.exports = data

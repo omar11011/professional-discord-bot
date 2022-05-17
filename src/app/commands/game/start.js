@@ -1,5 +1,5 @@
 const Command = require('../../util/class/Command')
-const i18n = require('../../translate')('commands/game')
+const i18n = require('../../../translate')('commands/game')
 const { user } = require('../../database')
 
 module.exports = new Command({

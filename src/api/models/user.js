@@ -4,7 +4,6 @@ module.exports = (sequelize, DataTypes) => {
         userId: { type: DataTypes.STRING, allowNull: false },
         username: { type: DataTypes.STRING, allowNull: true },
         money: { type: DataTypes.INTEGER, defaultValue: 0 },
-        gems: { type: DataTypes.INTEGER, defaultValue: 0 },
         reputation: { type: DataTypes.INTEGER, defaultValue: 0 },
         date: { type: DataTypes.DATE, allowNull: false },
     },  {

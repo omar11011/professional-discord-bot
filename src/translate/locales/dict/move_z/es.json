@@ -1,0 +1,20 @@
+{
+    "acero": "Hélice Trepanadora",
+    "agua": "Hidrovórtice Abisal",
+    "bicho": "Guadaña Sedosa",
+    "dragon": "Dracoaliento Devastador",
+    "electrico": "Gigavoltio Destructor",
+    "fantasma": "Presa Espectral",
+    "fuego": "Hecatombe Pírica",
+    "hada": "Arrumaco Sideral",
+    "hielo": "Crioaliento Despiadado",
+    "lucha": "Ráfaga Demoledora",
+    "normal": "Carrera Arrolladora",
+    "planta": "Megatón Floral",
+    "psiquico": "Disruptor Psíquico",
+    "roca": "Aplastamiento Gigalítico",
+    "siniestro": "Agujero Negro Aniquilador",
+    "tierra": "Barrena Telúrica",
+    "veneno": "Diluvio Corrosivo",
+    "volador": "Picado Supersónico"
+}

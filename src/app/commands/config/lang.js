@@ -1,5 +1,5 @@
 const Command = require('../../util/class/Command')
-const i18n = require('../../translate')('commands/config')
+const i18n = require('../../../translate')('commands/config')
 
 const megadb = require('megadb')
 const lang_db = new megadb.crearDB('lang', 'config')

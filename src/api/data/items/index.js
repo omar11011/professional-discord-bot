@@ -1,4 +1,4 @@
-module.exports = {
-    television: require('./television'),
-    ring: require('./ring'),
-}
+module.exports = [
+    ...require('./crystal'),
+    ...require('./ball'),
+]

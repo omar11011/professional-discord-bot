@@ -1,0 +1,28 @@
+const Movement = require('../base')
+
+const {  } = require('../../types')
+const {  } = require('../../movement_class')
+
+module.exports = new Movement({
+    uuid: ,
+    name: "",
+    combat: {
+        type: ,
+        class: ,
+        power: ,
+        precision: ,
+        priority: ,
+        effect: {
+            user: {},
+            rival: {},
+        },
+    },
+    move_z: {
+        type: ,
+        power: ,
+        effect: {
+            user: {},
+            rival: {},
+        },
+    },
+})

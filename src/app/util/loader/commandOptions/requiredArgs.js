@@ -1,5 +1,5 @@
 const megadb = require('megadb')
-const i18n = require('../../../translate')('handler')
+const i18n = require('../../../../translate')('handler')
 
 async function requiredArgs(message, command, props) {
     if(!command.args || (command.args && props.args.length > 0)) return false

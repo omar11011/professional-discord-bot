@@ -1,4 +1,6 @@
 module.exports = {
-    get: require('./get'),
     getAll: require('./getAll'),
+    getPerID: require('./getPerID'),
+    getPerName: require('./getPerName'),
+    getPerCategory: require('./getPerCategory'),
 }

@@ -1,5 +1,5 @@
 const Command = require('../../util/class/Command')
-const i18n = require('../../translate')('commands/action')
+const i18n = require('../../../translate')('commands/action')
 const randomImage = require('../../util/functions/randomImage')
 
 module.exports = new Command({

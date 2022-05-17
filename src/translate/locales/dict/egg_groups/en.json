@@ -1,0 +1,17 @@
+{
+    "desconocido": "Unknown",
+    "planta": "Plant",
+    "bicho": "Bug",
+    "volador": "Flying",
+    "humanoide": "Humanoid",
+    "mineral": "Mineral",
+    "amorfo": "Amorphous",
+    "campo": "Countryside",
+    "ditto": "Ditto",
+    "agua1": "Water 1",
+    "agua2": "Water 2",
+    "agua3": "Water 3",
+    "monstruo": "Monster",
+    "hada": "Fairy",
+    "dragon": "Dragon"
+}

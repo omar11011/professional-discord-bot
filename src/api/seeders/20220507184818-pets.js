@@ -11,6 +11,8 @@ module.exports = {
       data.file.push({
         uuid: pets[i].uuid,
         name: pets[i].name,
+        male: pets[i].gender.male,
+        female: pets[i].gender.female,
         hp: pets[i].stats.hp,
         attack: pets[i].stats.attack,
         defense: pets[i].stats.defense,

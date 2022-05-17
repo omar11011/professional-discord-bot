@@ -1,5 +1,5 @@
 const bot = require('../../../config')
-const i18n = require('../../../translate')('handler')
+const i18n = require('../../../../translate')('handler')
 
 async function enabled(message, command, props) {
     

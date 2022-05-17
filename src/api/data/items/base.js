@@ -1,11 +1,9 @@
 class Item {
     constructor(props) {
-        this.code = props.code
+        this.uuid = props.uuid
         this.name = props.name
-        this.available = props.available || true
-        this.onSale = props.onSale || true
-        this.price = props.price
-        this.discount = props.discount || 0
+        this.pruchasePrice = props.pruchasePrice || null
+        this.salePrice = props.salePrice || null
     }
 }
 
