@@ -3,6 +3,7 @@ const { normal } = require('../types')
 class Pet {
     constructor(props) {
         this.uuid = props.uuid || null
+        this.pokedex = props.pokedex || null
         this.name = props.name || undefined
         this.type = props.type || [ normal ]
         this.gender = {

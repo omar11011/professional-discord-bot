@@ -23,5 +23,6 @@ app.use('/v1/contest', routes.contest)
 app.use('/v1/type', routes.type)
 app.use('/v1/movement', routes.movement)
 app.use('/v1/item', routes.item)
+app.use('/v1/region', routes.region)
 
 module.exports = app
