@@ -1,13 +1,14 @@
-const { normal } = require('../types')
-const { fisico } = require('../movement_class')
+const types = require('../types')
+const move_z = require('../move_z')
+const movement_class = require('../movement_class')
 
 class Movement {
     constructor(props) {
         this.uuid = props.uuid || null
         this.name = props.name || undefined
         this.combat = {
-            type: props.combat.type || normal,
-            class: props.combat.class || fisico,
+            type: types.find(e => e.name == (props.combat.type || "normal")),
+            class: movement_class.find(e => e.name == (props.combat.class || "fisico")),
             power: props.combat.power || 0,
             precision: props.combat.precision || 100,
             priority: props.combat.priority || 0,
@@ -29,8 +30,7 @@ class Movement {
             },
         }
         this.move_z = {
-            crystal: props.move_z.crystal || null,
-            type: props.move_z.type || normal,
+            ...move_z.find(e => e.type.name == (props.combat.type || "normal")),
             power: props.move_z.power || 0,
             effect: {
                 user: {

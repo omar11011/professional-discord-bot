@@ -5,7 +5,6 @@ class Crystal extends Item {
         super(props)
 
         this.category = "crystal"
-        this.move_z = props.move_z
     }
 }
 

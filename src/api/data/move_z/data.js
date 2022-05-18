@@ -1,20 +1,3 @@
-module.exports = {
-    acero: { uuid: 1, name: "helice trepanadora" },
-    agua: { uuid: 2, name: "hidrovortice abisal" },
-    bicho: { uuid: 3, name: "guadana sedosa" },
-    dragon: { uuid: 4, name: "dracoaliento devastador" },
-    electrico: { uuid: 5, name: "gigavoltio destructor" },
-    fantasma: { uuid: 6, name: "presa espectral" },
-    fuego: { uuid: 7, name: "hecatombe pírica" },
-    hada: { uuid: 8, name: "arrumaco sideral" },
-    hielo: { uuid: 9, name: "crioaliento despiadado" },
-    lucha: { uuid: 10, name: "rafaga demoledora" },
-    normal: { uuid: 11, name: "carrera arrolladora" },
-    planta: { uuid: 12, name: "megaton floral" },
-    psiquico: { uuid: 13, name: "disruptor psiquico" },
-    roca: { uuid: 14, name: "aplastamiento gigalitico" },
-    siniestro: { uuid: 15, name: "agujero negro aniquilador" },
-    tierra: { uuid: 16, name: "barrena telurica" },
-    veneno: { uuid: 17, name: "diluvio corrosivo" },
-    volador: { uuid: 18, name: "picado supersonico" },
-}
+module.exports = [
+    ...require('./v1.0.0'),
+]
