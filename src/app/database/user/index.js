@@ -1,5 +1,7 @@
 module.exports = {
     create: require('./create'),
-    get: require('./get'),
+    update: require('./update'),
+    getPerID: require('./getPerID'),
+    getPerUser: require('./getPerUser'),
     revalidate: require('./revalidate'),
 }

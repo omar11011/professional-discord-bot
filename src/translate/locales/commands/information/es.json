@@ -1,0 +1,28 @@
+{
+    "shop": {
+        "error": "No existe esta categoría.",
+        "notAvailable": "No disponible",
+        "price": "Precio",
+        "embed1": {
+            "author": "🛒 Tienda Pokémon",
+            "description": "Estas son las distintas categorías que puedes revisar:",
+            "field": "Categoría: ${category}",
+            "footer": "Puedes acceder a cualquier categoría usando ${prefix}shop [categoria]"
+        },
+        "embed2": {
+            "title": "Página ${page}",
+            "author": "🛒 Categoría: ${category}",
+            "footer": "Para ver la información de un item utiliza el comando ${prefix}item [ID]."
+        }
+    },
+    "item": {
+        "notExist": "El ID introducido no le pertenece a ningún item.",
+        "category": "Categoría",
+        "purchasePrice": "Precio de Compra",
+        "salePrice": "Precio de Venta",
+        "footer": "Para comprar este artículo puedes usar el comando ${prefix}buy [ID] [cantidad]"
+    },
+    "info": {
+        "error": "El pokémon que buscas no existe o aún no ha sido añadido."
+    }
+}

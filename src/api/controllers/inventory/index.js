@@ -1,6 +1,4 @@
 module.exports = {
-    getAll: require('./getAll'),
-    getAllOfCategory: require('./getAllOfCtegory'),
-    create: require('./create'),
-    transfer: require('./transfer'),
+    buy: require('./buy'),
+    sell: require('./sell'),
 }

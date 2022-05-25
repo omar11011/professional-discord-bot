@@ -1,0 +1,14 @@
+{
+    "money": "Dinero",
+    "hp": "Salud",
+    "attack": "Ataque",
+    "defense": "Defensa",
+    "spattack": "Ataque Especial",
+    "spdefense": "Defensa Especial",
+    "speed": "Velocidad",
+    "power": "Poder",
+    "region": "Región",
+    "type": "Tipo",
+    "eggGroup": "Grupo Huevo",
+    "capture": "Ratio de Captura"
+}

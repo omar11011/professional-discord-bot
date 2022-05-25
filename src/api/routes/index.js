@@ -2,7 +2,7 @@ module.exports = {
     user: require('./user'),
     inventory: require('./inventory'),
     marriage: require('./marriage'),
-    pet: require('./pet'),
+    pokemon: require('./pokemon'),
 
     move_z: require('./move_z'),
     egg_group: require('./egg_group'),

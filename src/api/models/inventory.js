@@ -1,8 +1,7 @@
 module.exports = (sequelize, DataTypes) => {
 
     const inventory = sequelize.define("inventory", {
-        code: { type: DataTypes.STRING, allowNull: false },
-        category: { type: DataTypes.STRING, allowNull: false },
+        item: { type: DataTypes.STRING, allowNull: false },
         quantity: { type: DataTypes.INTEGER, defaultValue: 1 },
     },  {
         sequelize,
@@ -10,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
         timestamps: false,
     })
 
-    inventory.associate = models => {
+    inventory.associate = models => {   
         inventory.belongsTo(models.user, { as: "user" })
     }
 

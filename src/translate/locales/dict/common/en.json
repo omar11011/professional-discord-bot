@@ -1,0 +1,14 @@
+{
+    "money": "Money",
+    "hp": "Health",
+    "attack": "Attack",
+    "defense": "Defense",
+    "spattack": "Special Attack",
+    "spdefense": "Special Defense",
+    "speed": "Speed",
+    "power": "Power",
+    "region": "Region",
+    "type": "Type",
+    "eggGroup": "Egg Group",
+    "capture": "Capture Rate"
+}
