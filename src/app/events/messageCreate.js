@@ -1,4 +1,5 @@
 const Event = require('../util/class/Event')
+const spawn = require('../util/functions/spawn')
 const commandOptions = require('../util/loader/commandOptions/')
 
 const megadb = require('megadb')
@@ -15,7 +16,10 @@ module.exports = new Event({
             lang: await lang_db.obtener(message.member.user.id) || client.bot.lang,
         }
     
-        if (!message.content.startsWith(props.prefix)) return
+        if (!message.content.startsWith(props.prefix)) {
+            if (message.content.length > 5) await spawn(client, message)
+            return
+        }
     
         props.args = message.content.slice(props.prefix.length).split(/ +/)
     

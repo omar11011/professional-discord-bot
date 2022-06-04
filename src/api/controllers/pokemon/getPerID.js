@@ -1,9 +1,9 @@
 const data = require('../../data/pokemon')
+const create = require('./functions/create')
 
 module.exports = async (req, res) => {
-    const result = data.find(e => e.uuid == parseInt(req.params.id))
+    const pokemon = data.find(e => e._uuid == req.params.id)
+    if (!pokemon) return res.json({ error: "Pokémon no encontrado." })
 
-    if (!result) return res.json({ error: "No se encontró este pokémon." })
-    
-    return res.json(result)
+    return res.json(create(pokemon))
 }

@@ -1,10 +1,10 @@
 const data = require('../../data/pokemon')
+const create = require('./functions/create')
 const transformWord = require('../../util/transformWord')
 
 module.exports = async (req, res) => {
-    const result = data.find(e => transformWord(e.name) == transformWord(req.params.name))
+    const pokemon = data.find(e => transformWord(e._name) == transformWord(req.params.name))
+    if (!pokemon) return res.json({ error: "Pokémon no encontrado." })
 
-    if (!result) return res.json({ error: "No se encontró este pokémon." })
-    
-    return res.json(result)
+    return res.json(create(pokemon))
 }

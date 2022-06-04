@@ -10,5 +10,6 @@
     "region": "Region",
     "type": "Type",
     "eggGroup": "Egg Group",
-    "capture": "Capture Rate"
+    "capture": "Capture Rate",
+    "increase": "Increase"
 }

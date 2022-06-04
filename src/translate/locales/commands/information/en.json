@@ -23,6 +23,11 @@
         "footer": "To buy this item you can use the command ${prefix}buy [ID] [quantity]"
     },
     "info": {
-        "error": "The Pokémon you are looking for does not exist or has not been added yet."
+        "error": "The Pokémon you are looking for does not exist or has not been added yet.",
+        "evolutions": {
+            "level": "Evolves into ${evolution} upon reaching level ${level}.",
+            "mega": "Giga-evolves into ${evolution} using ${item}.",
+            "giga": "Giga-evolves into ${evolution} during combat."
+        }
     }
 }

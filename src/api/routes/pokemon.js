@@ -3,6 +3,7 @@ const controller = require('../controllers/pokemon')
 
 const router = Router()
 
+router.get('/spawn', async (req, res) => await controller.spawn(req, res))
 router.get('/id/:id', async (req, res) => await controller.getPerID(req, res))
 router.get('/pokedex/:id', async (req, res) => await controller.getPerDex(req, res))
 router.get('/name/:name', async (req, res) => await controller.getPerName(req, res))

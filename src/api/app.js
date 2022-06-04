@@ -8,7 +8,6 @@ app.use(bodyParser.json())
 
 const routes = require('./routes')
 
-app.use('/v1/item', routes.item)
 app.use('/v1/inventory', routes.inventory)
 app.use('/v1/marriage', routes.marriage)
 

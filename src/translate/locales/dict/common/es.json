@@ -10,5 +10,6 @@
     "region": "Región",
     "type": "Tipo",
     "eggGroup": "Grupo Huevo",
-    "capture": "Ratio de Captura"
+    "capture": "Ratio de Captura",
+    "increase": "Crecimiento"
 }

@@ -23,6 +23,11 @@
         "footer": "Para comprar este artículo puedes usar el comando ${prefix}buy [ID] [cantidad]"
     },
     "info": {
-        "error": "El pokémon que buscas no existe o aún no ha sido añadido."
+        "error": "El pokémon que buscas no existe o aún no ha sido añadido.",
+        "evolutions": {
+            "level": "Evoluciona en ${evolution} al llegar al nivel ${level}.",
+            "mega": "Mega-evoluciona en ${evolution} usando ${item}.",
+            "giga": "Giga-evoluciona en ${evolution} durante el combate."
+        }
     }
 }

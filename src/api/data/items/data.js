@@ -1,4 +1,4 @@
 module.exports = [
     ...require('./crystal'),
-    ...require('./ball'),
+    ...require('./mega_stone'),
 ]
