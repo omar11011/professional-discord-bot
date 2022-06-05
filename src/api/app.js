@@ -22,5 +22,6 @@ app.use('/v1/movement', routes.movement)
 app.use('/v1/item', routes.item)
 app.use('/v1/region', routes.region)
 app.use('/v1/pokemon', routes.pokemon)
+app.use('/v1/catch', routes.catch)
 
 module.exports = app

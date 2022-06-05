@@ -12,4 +12,5 @@ module.exports = {
     region: require('./region'),
     movement: require('./movement'),
     item: require('./item'),
+    catch: require('./catch'),
 }

@@ -2,5 +2,9 @@
     "start": {
         "success": "You have successfully registered.",
         "error": "You have already registered before."
+    },
+    "catch": {
+        "error": "An error occurred while trying to catch this Pokémon, please contact support immediately.",
+        "success": "Congratulations! You caught **${pokemon}** level ${level}."
     }
 }

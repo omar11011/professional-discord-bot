@@ -8,5 +8,5 @@ module.exports = async (client, message) => {
 
     const channel = await findChannel(message.guild.id) || message.channel.id
 
-    return create(client, message.guild.id, channel)
+    return create(client, channel)
 }

@@ -4,6 +4,7 @@ module.exports = (sequelize, DataTypes) => {
         userId: { type: DataTypes.STRING, allowNull: false },
         username: { type: DataTypes.STRING, allowNull: true },
         money: { type: DataTypes.INTEGER, defaultValue: 0 },
+        region: { type: DataTypes.STRING, defaultValue: 'kanto' },
         date: { type: DataTypes.DATE, allowNull: false },
     },  {
         sequelize,
@@ -16,6 +17,7 @@ module.exports = (sequelize, DataTypes) => {
         user.hasMany(models.marriage, { as: "sent", foreignKey: "person1" })
         user.hasMany(models.marriage, { as: "received", foreignKey: "person2" })
         user.hasMany(models.inventory, { as: "inventory", foreignKey: "userId" })
+        user.hasMany(models.pokemon, { as: "pokemon", foreignKey: "userId" })
     }
 
     return user
