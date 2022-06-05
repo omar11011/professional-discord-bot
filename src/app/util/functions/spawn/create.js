@@ -11,7 +11,7 @@ module.exports = async (client, server, channel) => {
 
     const Embed = await embed({
         description: '¿Quién es este pokémon?',
-        attachment: { dir: 'pokemon', img: name + '.png' },
+        attachment: { dir: 'pokemon', img: name.split(" ").join("_") + '.png' },
         footer: `Responde correctamente el nombre de este pokémon con el comando catch para atraparlo.`,
     })
 

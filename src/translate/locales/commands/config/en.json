@@ -6,5 +6,12 @@
     "prefix": {
         "success": "The following prefix has been set for the server: `${prefix}`.",
         "error": "The prefix cannot be more than two characters."
+    },
+    "spawn": {
+        "notChannel": "A preferential channel for Pokémon spawning has not been established.",
+        "list": "The Pokémon spawn is found in the channel <#${channel}>."
+    },
+    "setspawn": {
+        "success": "Channel <#${channel}> has been set as a new Pokémon spawn point."
     }
 }

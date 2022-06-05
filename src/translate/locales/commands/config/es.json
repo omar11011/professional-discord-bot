@@ -6,5 +6,12 @@
     "prefix": {
         "success": "Se ha establecido el siguiente prefijo para el servidor: `${prefix}`.",
         "error": "El prefijo no puede tener más de dos caracteres."
+    },
+    "spawn": {
+        "notChannel": "No se ha establecido un canal preferencial para el spawn de Pokémon.",
+        "list": "El spawn Pokémon se encuentra en el canal <#${channel}>."
+    },
+    "setspawn": {
+        "success": "Se ha establecido el canal <#${channel}> como nuevo punto de spawn Pokémon."
     }
 }
