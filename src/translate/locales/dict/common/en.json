@@ -11,5 +11,14 @@
     "type": "Type",
     "eggGroup": "Egg Group",
     "capture": "Capture Rate",
-    "increase": "Increase"
+    "increase": "Increase",
+    "male": "Male",
+    "female": "Female",
+    "none": "None",
+    "level": "Level",
+    "gender": "Gender",
+    "nature": "Nature",
+    "friendship": "Friendship",
+    "iv": "Total IV",
+    "globalID": "Global ID"
 }

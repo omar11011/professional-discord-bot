@@ -22,7 +22,7 @@
         "salePrice": "Sale Price",
         "footer": "To buy this item you can use the command ${prefix}buy [ID] [quantity]"
     },
-    "info": {
+    "dex": {
         "error": "The Pokémon you are looking for does not exist or has not been added yet.",
         "evolutions": {
             "level": "Evolves into ${evolution} upon reaching level ${level}.",
@@ -32,5 +32,8 @@
     },
     "pokemon": {
         "notFound": "You have not caught any Pokémon."
+    },
+    "info": {
+        "notSelect": "You don't have any Pokémon selected."
     }
 }

@@ -3,54 +3,38 @@ const dict = require('../../../translate')('dict/common')
 const i18n = require('../../../translate')('commands/information')
 
 const { Embed } = require('../../util/functions')
-const { pokemon } = require('../../database')
+const { user, captures } = require('../../database')
 
 module.exports = new Command({
     name: "info",
     cooldown: 4,
-    args: true,
     run: async (client, message, props) => {
-        let data = null
-        let description = ''
+        let pokemon = null
+        const userId = (await user.create({ userId: message.member.user.id })).id
 
-        if (!isNaN(props.args[0])) data = await pokemon.getPerID(props.args[0])
-        else data = await pokemon.getPerName(props.args.join(" "))
+        if (props.args.length < 1) pokemon = await captures.get({ userId: userId, current: true })
+        else {
 
-        if (!data || data.error) return message.reply(i18n.res('info.error', props.lang))
-
-        description += `${dict.res('region', props.lang)}: ${data.region.idioms[props.lang]}\n`
-        description += `${dict.res('type', props.lang)}: ${data.type.map(e => e.idioms[props.lang]).join("/")}\n`
-        description += `${dict.res('increase', props.lang)}: ${data.increase.idioms[props.lang]}\n`
-
-        if (data.evolutions.level.length > 0) {
-            for (let i = 0; i < data.evolutions.level.length; i++) description += `\n${i18n.res('info.evolutions.level', props.lang, { evolution: data.evolutions.level[i].pokemon, level: data.evolutions.level[i].level })}`
-        }
-        if (data.evolutions.mega.length > 0) {
-            for (let i = 0; i < data.evolutions.mega.length; i++) description += `\n${i18n.res('info.evolutions.mega', props.lang, { evolution: data.evolutions.mega[i].pokemon, item: data.evolutions.mega[i].item.idioms[props.lang] })}`
-        }
-        if (data.evolutions.giga.length > 0) {
-            for (let i = 0; i < data.evolutions.giga.length; i++) description += `\n${i18n.res('info.evolutions.giga', props.lang, { evolution: data.evolutions.giga[i].pokemon })}`
         }
 
-        try {
-            const embed = await Embed.create({
-                author: `${data.name} #${data.pokedex}`,
-                description: description,
-                fields: Object.keys(data.stats).map(e => {
-                    return {
-                        name: dict.res(e, props.lang),
-                        value: `${dict.res('power', props.lang)}: ${data.stats[e]}/255`,
-                        inline: true,
-                    }
-                }),
-                attachment: { dir: 'pokemon', img: data.name.split(" ").join("_") + '.png' },
-                footer: `Pokémon ID: ${data.uuid}`,
-            })
-            
-            return message.reply(embed)
+        if (!pokemon) return message.reply(i18n.res('info.notSelect', props.lang))
+        
+        console.log(pokemon)
+        const obj = {
+            title: (pokemon.shiny ? '⭐ ' : '') + pokemon.pokemon,
+            description: '',
+            attachment: { dir: 'pokemon' + (pokemon.shiny ? '/shiny' : ''), img: pokemon.pokemon.split(" ").join("_") + '.png' },
         }
-        catch (err) {
-            return console.log(err.name)
-        }
+
+        obj.description += `${dict.res('globalID', props.lang)}: ${pokemon.id}\n`
+        obj.description += `${dict.res('level', props.lang)}: ${pokemon.level} (${pokemon.xp}/)\n`
+        obj.description += `${dict.res('gender', props.lang)}: ${dict.res(pokemon.gender, props.lang)}\n`
+        obj.description += `${dict.res('nature', props.lang)}: ${pokemon.nature[props.lang]}\n`
+        obj.description += `${dict.res('friendship', props.lang)}: ${pokemon.friendship}/1000\n`
+        obj.description += `${dict.res('iv', props.lang)}: ${pokemon.iv}%`
+
+        const embed = await Embed.create(obj)
+
+        return message.reply(embed)
     }
 })

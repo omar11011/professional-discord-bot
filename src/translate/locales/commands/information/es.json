@@ -22,7 +22,7 @@
         "salePrice": "Precio de Venta",
         "footer": "Para comprar este artículo puedes usar el comando ${prefix}buy [ID] [cantidad]"
     },
-    "info": {
+    "dex": {
         "error": "El pokémon que buscas no existe o aún no ha sido añadido.",
         "evolutions": {
             "level": "Evoluciona en ${evolution} al llegar al nivel ${level}.",
@@ -32,5 +32,8 @@
     },
     "pokemon": {
         "notFound": "Aún no has atrapado ningún Pokémon."
+    },
+    "info": {
+        "notSelect": "No tienes ningún Pokémon seleccionado."
     }
 }

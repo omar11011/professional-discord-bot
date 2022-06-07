@@ -11,5 +11,14 @@
     "type": "Tipo",
     "eggGroup": "Grupo Huevo",
     "capture": "Ratio de Captura",
-    "increase": "Crecimiento"
+    "increase": "Crecimiento",
+    "male": "Masculino",
+    "female": "Femenino",
+    "none": "Ninguno",
+    "level": "Nivel",
+    "gender": "Género",
+    "nature": "Naturaleza",
+    "friendship": "Amistad",
+    "iv": "Total IV",
+    "globalID": "ID Global"
 }

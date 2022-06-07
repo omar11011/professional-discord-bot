@@ -1,4 +1,5 @@
 const models = require('../../models')
+const nature = require('../../data/nature')
 
 module.exports = async (req, res) => {
     const data = req.body
@@ -13,6 +14,7 @@ module.exports = async (req, res) => {
     data.iv = ((data.hp + data.attack + data.defense + data.spattack + data.spdefense + data.speed) / 6) * 100 / 31
     data.date = new Date()
     data.gender = data.gender == false ? 'none' : ['male', 'female'][Math.floor(Math.random() * 2)]
+    data.nature = nature[Math.floor(Math.random() * nature.length)].name
 
     try {
         await models.pokemon.create(data).then(e => res.json(e.dataValues))

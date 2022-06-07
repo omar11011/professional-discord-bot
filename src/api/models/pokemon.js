@@ -16,6 +16,7 @@ module.exports = (sequelize, DataTypes) => {
         iv: { type: DataTypes.DECIMAL(10,2), allowNull: false },
         friendship: { type: DataTypes.INTEGER, defaultValue: 0 },
         gender: { type: DataTypes.STRING, defaultValue: 'male' },
+        nature: { type: DataTypes.STRING, allowNull: false },
         movements: { type: DataTypes.STRING, allowNull: true },
         item: { type: DataTypes.STRING, allowNull: true },
         date: { type: DataTypes.DATE, allowNull: false },
