@@ -7,7 +7,6 @@ module.exports = class Charmeleon extends Pokemon {
         this._pokedex = 5
         this._type = props.type || "fuego"
         this._increase = props.increase || "parabolico"
-        this._gender = props.gender || { male: 87.5, female: 12.5 }
         this._friendship = props.friendship || 50
         this._stats = props.stats || {
             hp: 58,

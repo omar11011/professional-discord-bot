@@ -12,7 +12,7 @@ module.exports = class Pokemon {
         this._region = props.region ? props.region.toLowerCase() : "kanto"
         this._type = (props.type ? props.type.toLowerCase() : "normal").split("/")
         this._increase = props.increase ? props.increase.toLowerCase() : "medio"
-        this._gender = props.gender || {}
+        this._gender = props.gender || true
         this._friendship = props.friendship || 70
         this._movements = props.movements || []
         this._stats = props.stats
@@ -39,13 +39,6 @@ module.exports = class Pokemon {
         return increase.find(e => e.name == this._increase)
     }
     get gender() {
-        if (!this._gender.male) this._gender.male = 0
-        if (!this._gender.female) this._gender.female = 0
-
-        if (this._gender.male > 0) this._gender.female = 100 - this._gender.male
-        if (this._gender.female > 0) this._gender.male = 100 - this._gender.female
-        if (this._gender.male + this._gender.female > 100) this._gender.male = this._gender.female = 50
-
         return this._gender
     }
     get friendship() {

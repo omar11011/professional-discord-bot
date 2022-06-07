@@ -9,9 +9,8 @@ const { captures, pokemon, user } = require('../../database')
 module.exports = new Command({
     name: "catch",
     alias: ["atrapar"],
+    args: true,
     run: async (client, message, props) => {
-        if (props.args.length < 1) return
-
         const name = await pokemon_db.obtener(message.channel.id)
 
         if (!name) return
@@ -21,18 +20,14 @@ module.exports = new Command({
             await message.react('✅')
         }
 
-        const userExist = await user.revalidate({
-            userId: message.member.user.id,
-            username: message.member.user.username,
-        })
-
+        const userId = (await user.create({ userId: message.member.user.id })).id
         const e = await pokemon.getPerName(name)
         const obj = {
             pokemon: e.uuid,
             level: Math.ceil(Math.random() * 10),
             friendship: e.friendship,
             gender: e.gender,
-            userId: userExist.id,
+            userId: userId,
         }
         const pokemonCreate = await captures.create(obj)
 

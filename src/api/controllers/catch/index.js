@@ -1,4 +1,6 @@
 module.exports = {
-    getPerID: require('./getPerID'),
+    get: require('./get'),
     create: require('./create'),
+    getAll: require('./getAll'),
+    update: require('./update'),
 }

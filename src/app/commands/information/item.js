@@ -3,7 +3,6 @@ const i18n = require('../../../translate')('commands/information')
 
 const { Embed } = require('../../util/functions')
 const { item } = require('../../database')
-const res = require('express/lib/response')
 
 module.exports = new Command({
     name: "item",

@@ -9,15 +9,11 @@ module.exports = new Command({
     alias: ["bal"],
     cooldown: 4,
     run: async (client, message, props) => {
-        const data = await user.revalidate({
-            userId: message.member.user.id,
-            username: message.member.user.username,
-        })
-
+        const { money } = await user.create({ userId: message.member.user.id })
         const embed = await Embed.create({
             color: 'GREEN',
             author: { name: message.member.user.username, iconURL: message.member.user.displayAvatarURL({ format: 'jpg' }) },
-            description: `💰 ${i18n.res("money", props.lang)}: ${String(data.money)}`,
+            description: `💰 ${i18n.res("money", props.lang)}: ${String(money)}`,
         })
 
         return message.reply(embed)

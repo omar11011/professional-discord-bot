@@ -21,6 +21,7 @@ module.exports = async props => {
         if (opts.name) embed.setAuthor(opts)
     }
     if (props.description) embed.setDescription(String(props.description))
+    if (props.thumbnail) embed.setThumbnail(props.thumbnail)
     if (props.fields) {
         for (let i = 0; i < props.fields.length; i++) embed.addField(props.fields[i].name, props.fields[i].value, props.fields[i].inline)
     }

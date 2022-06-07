@@ -2,15 +2,16 @@ const models = require('../../models')
 
 module.exports = async (req, res) => {
     const data = req.body
-    if (!data.userId) return res.json({ error: "Faltó especificar al usuario." })
+    const props = data.props
+    const values = data.values
+    
     if (!data.token || data.token != process.env.API_TOKEN) return res.json({ error: "Sin autorización." })
 
-    const user = await models.user.findOne({ where: { userId: data.userId } })
+    const user = await models.user.findOne({ where: props })
     if (!user) return res.json({ error: "Usuario no registrado." })
 
-    if (data.username) user.username = data.username
-    if (data.money && !isNaN(data.money)) user.money += parseInt(data.money)
+    if (values.username) user.username = values.username
+    if (values.money && !isNaN(values.money)) user.money = parseInt(values.money)
     
-    await models.user.update(user.dataValues, { where: { id: user.id } })
-    return res.json(user.dataValues)
+    await models.user.update(values, { where: { id: user.id } }).then(() => res.json(user))
 }

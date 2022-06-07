@@ -7,12 +7,9 @@ module.exports = new Command({
     alias: ["empezar"],
     cooldown: 5,
     run: async (client, message, props) => {
-        const data = await user.create({
-            userId: message.member.user.id,
-            username: message.member.user.username,
-        })
+        const data = await user.create({ userId: message.member.user.id })
         
-        if (data.error) return message.reply(i18n.res('start.error', props.lang))
+        if (data.already) return message.reply(i18n.res('start.error', props.lang))
 
         return message.reply(i18n.res('start.success', props.lang))
     }

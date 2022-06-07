@@ -29,5 +29,8 @@
             "mega": "Giga-evolves into ${evolution} using ${item}.",
             "giga": "Giga-evolves into ${evolution} during combat."
         }
+    },
+    "pokemon": {
+        "notFound": "You have not caught any Pokémon."
     }
 }

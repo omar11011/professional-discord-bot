@@ -1,3 +1,6 @@
 module.exports = {
-    create: require('./create')
+    get: require('./get'),
+    getAll: require('./getAll'),
+    create: require('./create'),
+    update: require('./update'),
 }

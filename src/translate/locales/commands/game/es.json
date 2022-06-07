@@ -6,5 +6,17 @@
     "catch": {
         "error": "Ocurrió un error al tratar de capturar a este Pokémon, por favor comunícate inmediantamente con el soporte.",
         "success": "¡Felicidades! Has capturado a **${pokemon}** nivel ${level}."
+    },
+    "rename": {
+        "length": "El nombre del Pokémon no puede exceder de los ${limit} caracteres.",
+        "notSelect": "No tienes ningún Pokémon seleccionado.",
+        "success": {
+            "null": "Has eliminado el nombre de tu Pokémon.",
+            "notNull": "¡Felicidades! El nuevo nombre de tu Pokémon ahora es ${name}."
+        }
+    },
+    "select": {
+        "notFound": "Aún no has atrapado ningún Pokémon.",
+        "success": "¡Genial! Has seleccionado a **${pokemon}** nivel ${level}."
     }
 }

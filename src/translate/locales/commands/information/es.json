@@ -29,5 +29,8 @@
             "mega": "Mega-evoluciona en ${evolution} usando ${item}.",
             "giga": "Giga-evoluciona en ${evolution} durante el combate."
         }
+    },
+    "pokemon": {
+        "notFound": "Aún no has atrapado ningún Pokémon."
     }
 }

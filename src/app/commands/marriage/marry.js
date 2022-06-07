@@ -11,16 +11,10 @@ module.exports = new Command({
         const mention = (message.mentions.members.first() || message.guild.members.cache.get(props.args[0]) || message.member).user
         if (!mention || mention.bot || mention.id == message.member.user.username) return message.reply(i18n.res("marry.not-mention", props.lang))
         
-        const person1 = await user.revalidate({
-            userId: message.member.user.id,
-            username: message.member.user.username,
-        })
-        const person2 = await user.revalidate({
-            userId: mention.id,
-            username: mention.username,
-        })
-
+        const person1 = await user.create({ userId: message.member.user.id })
+        const person2 = await user.create({ userId: mention.id })
         const exists = (await marriage.get(message.member.user.id)).find(e => e.userId == mention.id)
+        
         if (exists) return message.reply(i18n.res("marry.exists", props.lang, { couple: person2.username }))
         
         const filter = m => m.author.id === mention.id
