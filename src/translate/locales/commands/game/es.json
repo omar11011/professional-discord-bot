@@ -1,4 +1,9 @@
 {
+    "common": {
+        "notSelect": "No tienes ningún Pokémon seleccionado.",
+        "notMoney": "No tienes suficiente dinero, necesitas ${price} monedas.",
+        "error": "Ha ocurrido un error, comunícate con nuestro soporte."
+    },
     "start": {
         "success": "Te has registrado correctamente.",
         "error": "Ya te habías registrado anteriormente."
@@ -9,7 +14,6 @@
     },
     "rename": {
         "length": "El nombre del Pokémon no puede exceder de los ${limit} caracteres.",
-        "notSelect": "No tienes ningún Pokémon seleccionado.",
         "success": {
             "null": "Has eliminado el nombre de tu Pokémon.",
             "notNull": "¡Felicidades! El nuevo nombre de tu Pokémon ahora es ${name}."
@@ -18,5 +22,12 @@
     "select": {
         "notFound": "Aún no has atrapado ningún Pokémon.",
         "success": "¡Genial! Has seleccionado a **${pokemon}** nivel ${level}."
+    },
+    "mega": {
+        "notForms": "Lo sentimos, ${pokemon} no posee mega-evoluciones.",
+        "success": "¡Felicidades! Tu Pokémon ha mega-evolucionado en **${pokemon}**."
+    },
+    "train": {
+        "success": "¡Genial! **${pokemon}** ha ganado ${xp} puntos de experiencia."
     }
 }

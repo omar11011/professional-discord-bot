@@ -22,11 +22,12 @@ module.exports = async (req, res) => {
     const nature = data_nature.find(n => n.name == pokemon.nature)
     const increase = data_increase.find(i => i.name == specie.increase.name)
 
-    pokemon.pokemon = specie.name
-    pokemon.nature = nature.idioms
-
+    pokemon.dataValues.pokemonId = pokemon.pokemon
     pokemon.dataValues.power = {}
     pokemon.dataValues.needExp = increase.needExp(pokemon.level)
+
+    pokemon.pokemon = specie.name
+    pokemon.nature = nature.idioms
 
     for (let i = 0; i < stats.length; i++) {
         if (stats[i] == 'hp') {

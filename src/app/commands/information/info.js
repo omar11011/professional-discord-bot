@@ -25,7 +25,7 @@ module.exports = new Command({
         }
 
         if (!pokemon) return message.reply(i18n.res('info.notSelect', props.lang))
-        console.log(pokemon)
+        
         const obj = {
             title: (pokemon.shiny ? '⭐ ' : '') + pokemon.pokemon,
             description: '',

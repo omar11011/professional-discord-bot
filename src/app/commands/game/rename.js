@@ -21,7 +21,7 @@ module.exports = new Command({
             values: { name: name },
         })
 
-        if (change.error) return message.reply(i18n.res('rename.notSelect', props.lang))
+        if (change.error) return message.reply(i18n.res('common.notSelect', props.lang))
         
         if (name != null) return message.reply(i18n.res('rename.success.notNull', props.lang, { name: name }))
         else return message.reply(i18n.res('rename.success.null', props.lang))
