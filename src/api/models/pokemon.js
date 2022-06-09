@@ -11,6 +11,7 @@ module.exports = (sequelize, DataTypes) => {
         friendship: { type: DataTypes.INTEGER, defaultValue: 0 },
         gender: { type: DataTypes.STRING, defaultValue: 'male' },
         nature: { type: DataTypes.STRING, allowNull: false },
+        category: { type: DataTypes.STRING, defaultValue: "comun" },
         item: { type: DataTypes.STRING, allowNull: true },
         date: { type: DataTypes.DATE, allowNull: false },
     },  {

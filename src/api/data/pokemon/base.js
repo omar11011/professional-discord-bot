@@ -3,6 +3,7 @@ const types = require('../types')
 const regions = require('../regions')
 const movements = require('../movements')
 const increase = require('../increase')
+const categories = require('../pokemonCategories')
 
 module.exports = class Pokemon {
     constructor(props) {
@@ -17,6 +18,7 @@ module.exports = class Pokemon {
         this._movements = props.movements || []
         this._stats = props.stats
         this._evolutions = props.evolutions ? props.evolutions : {}
+        this._category = props.category ? props.category.toLowerCase() : "comun"
         this._spawn = props.spawn != null ? props.spawn : true
     }
 
@@ -82,6 +84,9 @@ module.exports = class Pokemon {
         }
 
         return this._evolutions
+    }
+    get category() {
+        return categories.find(e => e.name == this._category)
     }
     get spawn() {
         return this._spawn

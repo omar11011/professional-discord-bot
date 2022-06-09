@@ -13,6 +13,7 @@ module.exports = props => {
         stats: props.stats,
         movements: props.movements,
         evolutions: props.evolutions,
+        category: props.category,
         spawn: props.spawn,
     }
 }
