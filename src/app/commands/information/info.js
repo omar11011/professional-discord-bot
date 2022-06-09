@@ -20,7 +20,6 @@ module.exports = new Command({
 
             const number = parseInt(props.args[0])
             if (number > list.length)  return message.react('❔')
-            console.log(list[ number - 1 ])
             pokemon = await captures.get({ id: list[number - 1].id })
         }
 

@@ -29,5 +29,8 @@
     },
     "train": {
         "success": "Cool! **${pokemon}** has gained ${xp} experience points."
+    },
+    "play": {
+        "success": "Cool! The friendship between you and **${pokemon}** has increased by ${points} points."
     }
 }

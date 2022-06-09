@@ -22,11 +22,10 @@ module.exports = new Command({
 
         const userId = (await user.create({ userId: message.member.user.id })).id
         const e = await pokemon.getPerName(name)
-        console.log(e)
         const obj = {
             pokemon: e.uuid,
             level: 5 + Math.floor(Math.random() * 10),
-            friendship: e.friendship,
+            friendship: Math.ceil(Math.random() * e.friendship),
             gender: e.gender,
             category: e.category.name,
             userId: userId,

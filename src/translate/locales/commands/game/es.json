@@ -29,5 +29,8 @@
     },
     "train": {
         "success": "¡Genial! **${pokemon}** ha ganado ${xp} puntos de experiencia."
+    },
+    "play": {
+        "success": "¡Genial! La amistad entre tú y **${pokemon}** ha aumentado en ${points} puntos."
     }
 }
