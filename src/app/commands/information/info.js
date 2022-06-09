@@ -25,7 +25,7 @@ module.exports = new Command({
         }
 
         if (!pokemon) return message.reply(i18n.res('info.notSelect', props.lang))
-        
+        console.log(pokemon)
         const obj = {
             title: (pokemon.shiny ? '⭐ ' : '') + pokemon.pokemon,
             description: '',
@@ -42,7 +42,7 @@ module.exports = new Command({
         obj.fields = Object.keys(pokemon.power).map(e => {
             return {
                 name: dict.res(e, props.lang),
-                value: `IV: ${pokemon[e]}/31\nPE: ${pokemon[e + 'PE']}/100\n${dict.res('power', props.lang)}: ${pokemon.power[e]}`,
+                value: `IV: ${pokemon.stat[e]}/31\nPE: ${pokemon.stat[e + 'PE']}/100\n${dict.res('power', props.lang)}: ${pokemon.power[e]}`,
                 inline: true,
             }
         })

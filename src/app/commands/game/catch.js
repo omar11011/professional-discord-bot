@@ -24,7 +24,7 @@ module.exports = new Command({
         const e = await pokemon.getPerName(name)
         const obj = {
             pokemon: e.uuid,
-            level: Math.ceil(Math.random() * 10),
+            level: 5 + Math.floor(Math.random() * 10),
             friendship: e.friendship,
             gender: e.gender,
             userId: userId,
